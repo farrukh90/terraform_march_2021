@@ -13,3 +13,16 @@ resource "aws_iam_group_membership" "developers_team" {
   ]
   group = aws_iam_group.developers.name
 }
+
+
+resource "aws_iam_user" "multiuser" {
+	name = each.key
+	for_each = toset([
+	"bob",
+	"sam",
+	"lisa",
+  "ben",
+  "ron",
+  "rick",
+	])
+}
