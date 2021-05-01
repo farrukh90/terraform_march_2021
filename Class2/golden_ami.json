@@ -10,7 +10,10 @@
   "provisioners": [{
     "type": "shell",
        "inline":[
-          "sudo yum update kernel -y"
+          "sudo yum update kernel -y",
+          "sudo yum install telnet -y",
+          "sudo useradd bob",
+          "sudo yum install wget unzip elinks -y"
          ]
        }
     ]
