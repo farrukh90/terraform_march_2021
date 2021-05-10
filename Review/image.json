@@ -2,7 +2,7 @@
     "builders": [{
       "type": "amazon-ebs",
       "region": "{{user `region`}}",
-      "ami_users": "{{user `ami_user`}}",
+      "ami_users": ["{{user `ami_user`}}"],
       "source_ami_filter": {
         "filters": {
             "virtualization-type": "hvm",
