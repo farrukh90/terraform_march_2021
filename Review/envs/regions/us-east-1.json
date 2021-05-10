@@ -5,5 +5,6 @@
     "ssh_keypair_name": "london_bastion",
     "ssh_private_key_file": "/home/ec2-user/.ssh/id_rsa",
     "ami_name": "packer-review",
-    "instance_type": "t2.micro"
+    "instance_type": "t2.micro",
+    "ami_user": "713287746880"
 }
