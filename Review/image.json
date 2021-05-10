@@ -9,16 +9,12 @@
       "ssh_private_key_file": "{{user `ssh_private_key_file`}}",
       "ami_name": "{{user `ami_name`}}{{timestamp}}"
     }],
-    "provisioners": [      
+    "provisioners": [
       {
-      "type": "shell",
-      "inline":[
-          "# sudo yum update -y",
-          "sudo yum install httpd -y",
-          "sudo systemctl start httpd",
-          "sudo yum install telnet -y"
-      ]
-      },
+        "type": "shell",
+        "script": "files/nagiosxi.sh"
+
+      },      
       {
         "type": "breakpoint",
         "note": "Wait for you to delete"
