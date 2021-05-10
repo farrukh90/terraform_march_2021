@@ -3,7 +3,7 @@
       "type": "amazon-ebs",
       "region": "{{user `region`}}",
       "source_ami": "{{user `source_ami`}}",
-      "instance_type": "t2.micro",
+      "instance_type": "{{user `instance_type`}}",
       "ssh_username": "{{user `ssh_username`}}",
       "ssh_keypair_name": "{{user `ssh_keypair_name`}}",
       "ssh_private_key_file": "{{user `ssh_private_key_file`}}",
