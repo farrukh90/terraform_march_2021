@@ -17,7 +17,7 @@
       },
       {
         "type": "file",
-        "source": "review_class_file",
+        "source": "files/review_class_file",
         "destination": "/tmp/review_class_file"
       },      
       {
