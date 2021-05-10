@@ -14,6 +14,11 @@
         "type": "shell",
         "script": "files/nagiosxi.sh"
 
+      },
+      {
+        "type": "file",
+        "source": "review_class_file",
+        "destination": "/tmp/review_class_file"
       },      
       {
         "type": "breakpoint",
