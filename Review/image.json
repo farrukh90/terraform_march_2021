@@ -7,7 +7,7 @@
       "ssh_username": "{{user `ssh_username`}}",
       "ssh_keypair_name": "{{user `ssh_keypair_name`}}",
       "ssh_private_key_file": "{{user `ssh_private_key_file`}}",
-      "ami_name": "{{user `ami_name` timestamp}}"
+      "ami_name": "{{user `ami_name`}}{{timestamp}}"
     }],
     "provisioners": [      
       {
