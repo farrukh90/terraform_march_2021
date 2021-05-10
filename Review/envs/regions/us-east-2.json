@@ -1,0 +1,8 @@
+{
+    "region": "us-east-2",
+    "source_ami": "ami-asdfasdf",
+    "ssh_username": "centos",
+    "ssh_keypair_name": "bobs-key",
+    "ssh_private_key_file": "/home/bob/.ssh/id_rsa",
+    "ami_name": "packer-review"
+}
