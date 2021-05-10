@@ -2,7 +2,15 @@
     "builders": [{
       "type": "amazon-ebs",
       "region": "{{user `region`}}",
-      "source_ami": "{{user `source_ami`}}",
+      "source_ami_filter": {
+        "filters": {
+            "virtualization-type": "hvm",
+            "name": "amzn2-ami-hvm-2.0.20210427.0-x86_64-gp2*",
+            "root-device-type": "ebs"
+         },
+            "owners": ["137112412989"],
+            "most_recent": true
+      },
       "instance_type": "{{user `instance_type`}}",
       "ssh_username": "{{user `ssh_username`}}",
       "ssh_keypair_name": "{{user `ssh_keypair_name`}}",
@@ -12,7 +20,7 @@
     "provisioners": [
       {
         "type": "shell",
-        "script": "files/nagiosxi.sh"
+        "script": "files/nagiosxi_for_centos.sh"
 
       },
       {
