@@ -16,3 +16,13 @@ resource "aws_subnet" "private_subnet3" {
   cidr_block = var.private_cidr3
   tags = var.tags
 }
+
+resource "aws_eip" "nat" {
+  vpc      = true
+  tags = var.tags
+}
+resource "aws_nat_gateway" "gw" {
+  allocation_id = aws_eip.nat.id
+  subnet_id     = aws_subnet.public_subnet1.id
+  tags = var.tags
+}

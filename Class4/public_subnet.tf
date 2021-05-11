@@ -16,3 +16,8 @@ resource "aws_subnet" "public_subnet3" {
   availability_zone = data.aws_availability_zones.available.names[2]
   tags = var.tags
 }
+
+resource "aws_internet_gateway" "gw" {
+  vpc_id = aws_vpc.main.id
+  tags = var.tags
+}
