@@ -1,8 +1,8 @@
 resource "aws_autoscaling_group" "example" {
   availability_zones = data.aws_availability_zones.all.names
-  desired_capacity   = 3
-  max_size           = 3
-  min_size           = 3
+  desired_capacity   = var.config["desired_capacity"]
+  max_size           = var.config["max_size"]
+  min_size           = var.config["min_size"]
   mixed_instances_policy {
     launch_template {
       launch_template_specification {
