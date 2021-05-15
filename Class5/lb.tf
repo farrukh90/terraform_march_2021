@@ -22,3 +22,8 @@ resource "aws_elb" "bar" {
 
 
 
+resource "aws_autoscaling_attachment" "asg_attachment_bar" {
+  autoscaling_group_name = aws_autoscaling_group.example.id
+  elb                    = aws_elb.bar.id
+}
+
