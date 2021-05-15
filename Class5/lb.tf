@@ -1,5 +1,3 @@
-data "aws_availability_zones" "all" {}
-
 resource "aws_elb" "bar" {
   name               = "foobar-terraform-elbs"
   availability_zones = data.aws_availability_zones.all.names
@@ -21,4 +19,6 @@ resource "aws_elb" "bar" {
   connection_draining         = true
   connection_draining_timeout = 400
 }
+
+
 
