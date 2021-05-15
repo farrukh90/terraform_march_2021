@@ -1,3 +1,3 @@
 provider "aws" {
-  region = var.config["region"]
+  region = var.region
 }

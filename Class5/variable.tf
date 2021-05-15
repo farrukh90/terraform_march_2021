@@ -1,10 +1,19 @@
-variable "config" {
-    type = map
-    default = {
-        desired_capacity   = 3
-        max_size           = 3
-        min_size           = 3
-        instance_type      = "c5.large"
-        region             = "us-east-1"
-    }
+variable "desired_capacity" {
+    default    = 3
 }
+variable "max_size" {
+    default    = 3
+}
+
+variable "min_size" {
+    default    = 3
+}
+        
+        
+variable "instance_type" {
+    default    = "c5.large"
+}
+variable "region" {
+    default             = "us-east-1"
+}
+    
