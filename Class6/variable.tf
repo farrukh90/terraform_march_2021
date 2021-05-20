@@ -15,6 +15,6 @@ variable "name" {}
 variable "username" {}
 variable "password" {}
 variable "publicly_accessible" {}
-variable allowed_hosts {
-    type = list
+variable "allowed_hosts" {
+  type = list(any)
 }
