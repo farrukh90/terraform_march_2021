@@ -6,7 +6,7 @@ resource "aws_security_group" "db" {
     from_port   = 3306
     to_port     = 3306
     protocol    = "tcp"
-    cidr_blocks = [var.allowed_hosts]
+    cidr_blocks = var.allowed_hosts
   }
   egress {
     from_port   = 0
