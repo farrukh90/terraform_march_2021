@@ -13,7 +13,6 @@ variable "engine_version" {}
 variable "instance_class" {}
 variable "name" {}
 variable "username" {}
-variable "password" {}
 variable "publicly_accessible" {}
 variable "allowed_hosts" {
   type = list(any)
