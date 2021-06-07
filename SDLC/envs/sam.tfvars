@@ -10,8 +10,8 @@ vpc_config = {
 }
 
 tags = {
-  Name        = "DEV_Project"
-  Environment = "DEV"
+  Name        = "SAM_Project"
+  Environment = "SAM"
   Team        = "DevOps"
   Created_by  = "Farrukh"
   Department  = "IT"
